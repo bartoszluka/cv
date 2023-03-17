@@ -1,0 +1,59 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% IMPORTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt,onesize,a4paper,titlepage]{article}
+
+%%%%%%%%%%%%%%% Formatting %%%%%%%%%%%%%%% 
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry} % Margins
+\usepackage{sectsty} % Custom Sections
+
+%%%%%%%%%%%%%%% Font %%%%%%%%%%%%%%% 
+\usepackage{Archivo}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%% Graphics %%%%%%%%%%%%%%% 
+\usepackage{fontawesome5} % Icons
+\usepackage{graphicx} % Images
+\usepackage[most]{tcolorbox} % Color Box
+\usepackage{xcolor} % Colors
+\usepackage{tikz} % For Drawing Shapes
+\tcbuselibrary{breakable}
+
+%%%%%%%%%%%%%%% Miscelanous %%%%%%%%%%%%%%% 
+\usepackage{lipsum} % Lorem Ipsum
+\usepackage{hyperref} % For Hyperlinks
+
+%%%%%%%%%%%%%%% More Compact Sections %%%%%%%%%%%%%%% 
+\usepackage[compact]{titlesec}
+
+%%%%%%%%%%%%%%% Colors %%%%%%%%%%%%%%% 
+\definecolor{title}{HTML}{4bfbba} % Color of the title
+\definecolor{backdrop}{HTML}{f2f2f2} % Color of the side column
+\definecolor{lightgray}{HTML}{b8b8b8} % Color for the skill bars
+
+%%%%%%%%%%%%%%% Section Format %%%%%%%%%%%%%%% 
+
+\titleformat{\section}{
+    \LARGE % Font size
+    % \sectionrule{0pt}{0pt}{-8pt}{1pt} % Rule under Section name
+}{\thesection}{1em}{}[{\titlerule[1pt]}]
+
+\titlespacing*{\section}{0pt}{1ex}{3ex}
+
+\titleformat{\subsection}{
+    \large % Font size
+    \fontfamily{phv}\selectfont % Font family
+}{\thesubsection}{1em}{}[{\titlerule[1pt]}]
+
+\titlespacing*{\subsection}{0pt}{1ex}{2ex}
+
+%%%%%%%%%%%%%%% Margins and Headers %%%%%%%%%%%%%%%
+\geometry{
+    a4paper,
+    left=7mm,
+    right=7mm,
+    bottom=10mm,
+    top=10mm
+}
+
+\pagestyle{empty} % Empty Headers

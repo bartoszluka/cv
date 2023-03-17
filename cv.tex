@@ -1,0 +1,103 @@
+\input{setup/preamble.tex}
+\input{setup/macros.tex}
+
+\begin{document}
+
+%%% Title %%%
+\tcbset{colframe=title,colback=title,arc=0mm}
+\begin{tcolorbox}
+
+    \begin{minipage}{0.3\textwidth} % Picture Area
+        \includegraphics[width=0.55\textwidth]{profile.jpeg} % Picture
+    \end{minipage} \hfill
+    \begin{minipage}{0.65\textwidth} % Name and Contact Info
+        \name{Bartosz Łuka}{Software Engineer} % Name and Profession
+        \vspace{2em}
+        \email{bartoszluka1@gmail.com} $\cdot$
+        \phone{+48 728 201 249} \par \vspace{0.5em}
+        \address{Warsaw, Poland} $\cdot$
+        \github{https://github.com/}{bartoszluka}
+    \end{minipage}
+    
+\end{tcolorbox}
+
+%%% Sections %%%
+\vspace*{-1em}
+\tcbset{colframe=white,colback=white,arc=0mm, height=0.8\textheight}
+\begin{tcolorbox}
+    \vspace*{-0.5em}
+    \begin{minipage}[t]{0.28\textwidth} % Side Panel (e.g. Skills, Links, Languages, etc.)
+        \begin{tcolorbox}[height=0.8\textheight, grow to left by=0.6cm,colback=backdrop,colframe=backdrop,arc=0mm]
+            % Skills, the skill level is drawn as bars,
+            % input: skill name and an array starting from 0 and ending before 4
+            \subsection*{Languages}
+            \skill{C\#}{0, 1, 2, 3, 4}
+            \skill{JavaScript/TypeScript}{0, 1, 2, 3, 4}
+            \skill{Python}{0, 1, 2, 3}
+            \skill{SQL}{0, 1, 2}
+            \skill{C++}{0, 1, 2}
+            \skill{C}{0, 1, 2}
+            \skill{Bash}{0, 1}
+            
+            \subsection*{Technologies}
+            \skill{.NET}{0, 1, 2, 3, 4}
+            \skill{Git}{0, 1, 2, 3}
+            \skill{React}{0, 1, 2, 3}
+            \skill{Linux}{0, 1, 2, 3}
+            \skill{Azure}{0, 1, 2, 3}
+            \skill{Jira}{0, 1, 2, 3}
+            
+            \subsection*{Spoken Languages}
+            \skill{Polish}{0, 1, 2, 3, 4}
+            \skill{English}{0, 1, 2, 3, 4}
+        \end{tcolorbox}
+    \end{minipage}
+    \begin{minipage}[t]{0.7\textwidth} % Main Panel (e.g. Education, Work Experience)
+        \begin{tcolorbox}[grow to right by=0.75cm,height=0.8\textheight,colframe=white,colback=white]
+            
+            \section*{About}
+            Hi, I'm Bartek, a \textbf{24-year-old} computer science student specializing in software development.
+            I'm skilled in many programming languages such as C\#, TypeScript, Haskell, F\#, Python, C, Java, and want to learn more.
+            I'm seeking a challenging role where I can apply my skills and learn from experienced professionals.
+            I'm a dedicated problem solver and team player, always eager to take on new challenges and expand my skill set.
+            
+            % Work Experience
+            \section*{Work Experience}
+            \work
+            {Jakub Stolarski}
+            {Jun 2021 - Oct 2022}
+            {C\# Developer} {
+                I worked in a startup on a project, which focused on creating a mobile app that aggregated account information from many different banks.
+                During my time at the company, I developed most of the mobile app,
+                created the backend that connected to other banks’ APIs,
+                configured a database, and set up CI/CD.
+            }
+            {C\#, Azure, Azure Functions, MSSQL, Xamarin}
+            
+            % Education
+            \section*{Education}
+            \education
+            {Warsaw University of Technology}
+            {Oct 2018 - Mar 2022}
+            {Bachelor of Science in Engineering (Computer Science)}
+            {
+                During my studies, I learned a lot about programming, algorithms, databases, operating systems, and more.
+                My time at university also taught me how to research on my own and how to work with others.
+                I have completed several projects, including web applications (front-end and back-end), CLI tools, and a compiler.
+                
+                My most ambitious project was part of my thesis which was a system for managing competition for the best thesis.
+                It consisted of a web server (C\#, ASP.NET) for storing and managing submissions as well as user accounts,
+                and a website (TypeScript, React) for the user interface.
+            } 
+            \section*{Activities}
+            
+            In the spare time I like to work on my own projects, which include: a math library, a compiler, a web app, and a desktop GUI app.
+            All of which are created with great attention to detail so the final product is intuitive, reliable and safe.
+            Every projects is (or soon should be) open source and available on my GitHub account.
+            
+            I also enjoy spending time configuring my tools to improve and perfect my workflow and productivity.
+        \end{tcolorbox}
+    \end{minipage}
+\end{tcolorbox}
+
+\end{document}
