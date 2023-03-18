@@ -9,14 +9,14 @@
 \newcommand{\name}[2]{
     % Name
     \Huge % Font size
-    \raggedright \textbf{#1} \par
+    \raggedright\textbf{#1} \par
     
     \vspace*{0.3cm}
     
     % Profession
     \Large % Font size
-    \raggedright #2 \par
-    \normalsize \normalfont
+    \raggedright#2 \par
+    \normalsize \normalfont{}
 }
 
 %%%%%%%%%%%%%%% Contact Details %%%%%%%%%%%%%%%
@@ -58,15 +58,18 @@
 \newcommand{\drawskillbars}[1]{
     \begin{tikzpicture}
         % Draw 5 gray bars
-        \foreach \i in {0, 1, 2, 3, 4}{
+        \foreach \i in {0, ..., 4}{
                 \fill[lightgray] (\i * 0.7 + 0.2 *\i,0) rectangle (0.7 + \i * 0.7 + \i * 0.2,0.1);
             }
         
         % Draw number of black bars depending on the skill level
-        \foreach \i in {#1}{
-                \fill[black] (\i * 0.7 + 0.2 *\i,0) rectangle (0.7 + \i * 0.7 + \i * 0.2,0.1);
-            }
-    \end{tikzpicture} \par
+        \pgfmathtruncatemacro{\howManyBars}{#1 - 1}
+        \ifnum \howManyBars > -1
+            \foreach \i in {0, ..., \howManyBars}{
+                    \fill[black] (\i * 0.7 + 0.2 *\i,0) rectangle (0.7 + \i * 0.7 + \i * 0.2,0.1);
+                }
+        \fi
+    \end{tikzpicture}
 }
 
 %%%%%%%%%%%%%%% Skills %%%%%%%%%%%%%%%
@@ -117,7 +120,7 @@
     \small \par \textbf{Technologies:} #5
     \vspace{0.4em}
     % \noindent \parbox{.7\linewidth}{Technologies: #5}
-
+    
     % \normalsize \par
 }
 
